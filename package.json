@@ -1,0 +1,23 @@
+{
+  "name": "wslead-tracking",
+  "version": "2.0.0",
+  "description": "Tracking Code for WSLead",
+  "main": "w.js",
+  "scripts": {
+    "build": "./node_modules/uglify-js/bin/uglifyjs src/*.js -o w.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucascaires/wslead-tracking.git"
+  },
+  "author": "Lucas Caires",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucascaires/wslead-tracking/issues"
+  },
+  "homepage": "https://github.com/lucascaires/wslead-tracking#readme",
+  "dependencies": {
+    "uglify-js": "^3.3.10"
+  }
+}

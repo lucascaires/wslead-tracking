@@ -1,3 +1,8 @@
+//XMLHttpRequest
+function Xhr(){
+    try{return new XMLHttpRequest();}catch(e){}try{return new ActiveXObject("Msxml3.XMLHTTP");}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP.6.0");}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP.3.0");}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP");}catch(e){}try{return new ActiveXObject("Microsoft.XMLHTTP");}catch(e){}return null;
+}
+
 (function() {
     if(!localStorage.getItem('wslead-track')) {
         var obj = {
@@ -12,9 +17,7 @@ function WSLead(formId, data) {
     this._apiPath = 'https://wslead.dev/api/v2/leads'
     this._formId = formId //ID of 
     this._rawData = data //Raw data with values and selectors
-    this.post(function(res) {
-        console.log(res)
-    })
+    this.post()
 }
 
 WSLead.prototype.sanitize = function(obj) {
@@ -54,7 +57,7 @@ WSLead.prototype.jsonfy = function(data) {
 }
 
 WSLead.prototype.post = function(callback) {
-    var xhr = new XMLHttpRequest
+    var xhr = new Xhr()
     xhr.open("POST", this._apiPath, true)
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
