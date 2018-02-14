@@ -14,7 +14,7 @@ function Xhr(){
 })()
 
 function WSLead(formId, data) {
-    this._apiPath = 'https://wslead.dev/api/v2/leads'
+    this._apiPath = 'https://wslead.wsiconsultores.com.br/api/v2/leads'
     this._formId = formId //ID of 
     this._rawData = data //Raw data with values and selectors
     this.post()
