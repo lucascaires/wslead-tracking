@@ -6,7 +6,8 @@ function Xhr(){
 (function() {
     if(!localStorage.getItem('wslead-track')) {
         var obj = {
-            path: window.document.referrer,
+            originPath: window.document.referrer,
+            initialPath: window.document.location.href,
             useragent: window.navigator.userAgent
         }
         localStorage.setItem('wslead-track', JSON.stringify(obj));   
