@@ -9,7 +9,7 @@ Paste the following code inside your <head></head>
 <script type="text/javascript">
 (function(){
     var script = document.createElement('script');
-    script.src = '//cdn.wsi.is/wslead/v2/w.js';
+    script.src = '//wslead.wsiconsultores.com.br/tracking/v2/w.js';
     document.head.appendChild(script);
 })();
 </script>
