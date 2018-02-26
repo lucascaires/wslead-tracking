@@ -57,15 +57,9 @@ WSLead.prototype.jsonfy = function(data) {
     return JSON.stringify(obj)
 }
 
-WSLead.prototype.post = function(callback) {
+WSLead.prototype.post = function() {
     var xhr = new Xhr()
-    xhr.open("POST", this._apiPath, true)
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            callback(xhr)
-            return true;
-        }
-    }
+    xhr.open("POST", this._apiPath, true)    
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
     xhr.send(this.jsonfy(this._rawData))
 }
