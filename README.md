@@ -7,11 +7,9 @@ Paste the following code inside your <head></head>
 
 ```html
 <script type="text/javascript">
-(function(){
-    var script = document.createElement('script');
-    script.src = '//wslead.wsiconsultores.com.br/tracking/v2/w.js';
-    document.head.appendChild(script);
-})();
+;(function(w,s,i){
+  a=w.createElement(s);a.async=1;a.src=i;w.head.appendChild(a);
+})(document, 'script', '//wslead.wsiconsultores.com.br/tracking/v2/w.js');
 </script>
 ```
 
@@ -21,7 +19,7 @@ Change the form_id (99999) for the properly form ID and you also have to change 
 
 ```html
 <script type="text/javascript">
-(function(){  
+;(function(){  
   new WSLead(99999999, {
     name : "input[name=name]",
     email : "input[name=email]",
